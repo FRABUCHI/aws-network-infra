@@ -1,5 +1,5 @@
 resource "aws_vpc" "this" {
-    cidr_block = "10.0.0.0/24" 
+    cidr_block = "10.0.0.0/23" 
     enable_dns_hostnames = true 
     tags =  { 
       Name = "${var.project_name}-vpc"

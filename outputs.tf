@@ -19,9 +19,9 @@ output "this_pri_sbnt_c_id" {
 }
 
 output "this_db_sbnt_a_id" {
-	value = "${module.vpcthis_db_sbnt_a_id}"
+	value = "${module.vpc.this_db_sbnt_a_id}"
 }
 
 output "this_db_sbnt_c_id" {
-	value = "${module.vpcthis_db_sbnt_c_id}"
+	value = "${module.vpc.this_db_sbnt_c_id}"
 }

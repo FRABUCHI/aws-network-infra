@@ -50,7 +50,7 @@ resource "aws_subnet" "private_c" {
 
 resource "aws_subnet" "private_db_a" {
     vpc_id = aws_vpc.this.id 
-    cidr_block = "10.0.0.256/26" 
+    cidr_block = "10.0.1.0/26" 
     availability_zone = "${var.region_a}" 
     map_public_ip_on_launch = false 
     tags = { 
@@ -58,9 +58,9 @@ resource "aws_subnet" "private_db_a" {
     } 
 }
 
-resource "aws_subnet" "private_db_b" {
+resource "aws_subnet" "private_db_c" {
     vpc_id = aws_vpc.this.id 
-    cidr_block = "10.0.1.0/26"  
+    cidr_block = "10.0.1.64/26"  
     availability_zone = "${var.region_c}"  
     map_public_ip_on_launch = false 
     tags = { 

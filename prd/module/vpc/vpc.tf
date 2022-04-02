@@ -2,7 +2,7 @@ resource "aws_vpc" "this" {
     cidr_block = "10.0.0.0/23" 
     enable_dns_hostnames = true 
     tags =  { 
-      Name = "${var.project_name}-vpc"
+      Name = "${var.env}-${var.project_name}-vpc"
 	} 
 }
 
@@ -12,7 +12,7 @@ resource "aws_subnet" "public_a" {
     availability_zone = "${var.region_a}" 
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-pub-a"
+        Name = "${var.env}-${var.project_name}-pub-a"
 	} 
 
 }
@@ -23,7 +23,7 @@ resource "aws_subnet" "public_c" {
     availability_zone = "${var.region_c}" 
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-pub-c"
+        Name = "${var.env}-${var.project_name}-pub-c"
 	} 
 
 }
@@ -34,7 +34,7 @@ resource "aws_subnet" "private_a" {
     availability_zone = "${var.region_a}" 
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-pri-a"
+        Name = "${var.env}-${var.project_name}-pri-a"
 	} 
 }
 
@@ -44,7 +44,7 @@ resource "aws_subnet" "private_c" {
     availability_zone = "${var.region_c}"  
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-pri-c"
+        Name = "${var.env}-${var.project_name}-pri-c"
 	} 
 }
 
@@ -54,7 +54,7 @@ resource "aws_subnet" "private_db_a" {
     availability_zone = "${var.region_a}" 
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-db-a"
+        Name = "${var.env}-${var.project_name}-db-a"
     } 
 }
 
@@ -64,6 +64,6 @@ resource "aws_subnet" "private_db_c" {
     availability_zone = "${var.region_c}"  
     map_public_ip_on_launch = false 
     tags = { 
-        Name = "${var.project_name}-db-c"
+        Name = "${var.env}-${var.project_name}-db-c"
     } 
 }

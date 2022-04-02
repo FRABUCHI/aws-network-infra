@@ -1,3 +1,8 @@
+variable "env" {
+	default = "dev"
+	type    = string
+}
+
 variable "project_name" {
 	default = "sample-api-server"
 	type    = string
